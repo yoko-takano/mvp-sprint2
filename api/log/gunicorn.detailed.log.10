@@ -1,0 +1,89 @@
+[2024-09-03 12:13:32,427] ERROR log_exception() L1449 Exception on /patient [POST] - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 191, in wrapper
+    resp = _do_wrapper(
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/app.py", line 77, in add_patient
+    model = Pipeline.load_pipeline(model_path)
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/model/pipeline.py", line 12, in load_pipeline
+    with open(path, 'rb') as file:
+FileNotFoundError: [Errno 2] No such file or directory: './MachineLearning/pipelines/rf_diabetes_pipeline.pkl'
+[2024-09-03 12:13:32,441] INFO _log() L224  127.0.0.1 - - [03/Sep/2024 12:13:32] "[35m[1mPOST /patient HTTP/1.1[0m" 500 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 12:14:06,857] INFO _log() L224   * Detected change in '/home/cyberforming-1790/Documentos/mvp_sprint2/api/app.py', reloading - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 12:19:21,777] INFO _log() L224   * Detected change in '/home/cyberforming-1790/Documentos/mvp_sprint2/api/test_models.py', reloading - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:08:32,900] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.247:5000 (Press CTRL+C to quit) - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:08:32,901] INFO _log() L224   * Restarting with stat - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:08:40,072] INFO _log() L224  127.0.0.1 - - [03/Sep/2024 13:08:40] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:08:40,111] INFO _log() L224  127.0.0.1 - - [03/Sep/2024 13:08:40] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:08:40,115] INFO _log() L224  127.0.0.1 - - [03/Sep/2024 13:08:40] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:08:40,116] INFO _log() L224  127.0.0.1 - - [03/Sep/2024 13:08:40] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:08:40,290] INFO _log() L224  127.0.0.1 - - [03/Sep/2024 13:08:40] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:08:48,939] ERROR log_exception() L1449 Exception on /patient [POST] - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 191, in wrapper
+    resp = _do_wrapper(
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/app.py", line 77, in add_patient
+    model = Pipeline.load_pipeline(model_path)
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/model/pipeline.py", line 12, in load_pipeline
+    with open(path, 'rb') as file:
+FileNotFoundError: [Errno 2] No such file or directory: './MachineLearning/pipelines/rf_breast_cancer_pipeline.pkl'
+[2024-09-03 13:08:48,950] INFO _log() L224  127.0.0.1 - - [03/Sep/2024 13:08:48] "[35m[1mPOST /patient HTTP/1.1[0m" 500 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:09:43,226] INFO _log() L224   * Detected change in '/home/cyberforming-1790/Documentos/mvp_sprint2/api/app.py', reloading - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:09:43,363] INFO _log() L224   * Restarting with stat - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:09:46,711] ERROR log_exception() L1449 Exception on /patient [POST] - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 191, in wrapper
+    resp = _do_wrapper(
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/app.py", line 80, in add_patient
+    diagnosis = bool(Model.predictor(model, x_input)[0])
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/model/model.py", line 29, in predictor
+    return self.model.predictor(x_input)
+AttributeError: 'Pipeline' object has no attribute 'model'
+[2024-09-03 13:09:46,713] INFO _log() L224  127.0.0.1 - - [03/Sep/2024 13:09:46] "[35m[1mPOST /patient HTTP/1.1[0m" 500 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:12:58,705] INFO _log() L224   * Detected change in '/home/cyberforming-1790/Documentos/mvp_sprint2/api/model/model.py', reloading - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-03 13:12:58,986] INFO _log() L224   * Restarting with stat - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 10:35:43,594] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.247:5000 (Press CTRL+C to quit) - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 10:35:43,595] INFO _log() L224   * Restarting with stat - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 10:35:56,646] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 10:35:56] "[33mGET /docs HTTP/1.1[0m" 404 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 10:35:56,740] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 10:35:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 

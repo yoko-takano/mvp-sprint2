@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Patient Management</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Patient Management System</h1>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Add a New Patient</h2>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="patient_name">Name<span class="required-indicator">*</span></label>
+                <input type="text" id="patient_name" placeholder="Paula da Silva" required>
+            </div>
+            <div class="form-group">
+                <label for="mean_radius">Mean Radius<span class="required-indicator">*</span></label>
+                <input type="text" id="mean_radius" placeholder="17.99" required>
+            </div>
+            <div class="form-group">
+                <label for="mean_texture">Mean Texture<span class="required-indicator">*</span></label>
+                <input type="text" id="mean_texture" placeholder="10.38" required>
+            </div>
+            <div class="form-group">
+                <label for="mean_perimeter">Mean Perimeter<span class="required-indicator">*</span></label>
+                <input type="text" id="mean_perimeter" placeholder="122.80" required>
+            </div>
+            <div class="form-group">
+                <label for="mean_area">Mean Area<span class="required-indicator">*</span></label>
+                <input type="text" id="mean_area" placeholder="1001.0" required>
+            </div>
+            <div class="form-group">
+                <label for="mean_smoothness">Mean Smoothness<span class="required-indicator">*</span></label>
+                <input type="text" id="mean_smoothness" placeholder="0.1184" required>
+            </div>
+            <button class="btn" onclick="newPatient()">Add Patient</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Patient List</h2>
+        <div class="patient-list-container" id="patientList">
+            <div class="patient-item">
+                <div class="patient-summary">
+                    <div class="patient-summary-text">
+                        <!-- Texto do paciente -->
+                    </div>
+                    <div class="patient-summary-buttons">
+                        <button class="view-more-btn">View More</button>
+                        <button class="view-less-btn">View Less</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <div id="notification-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>

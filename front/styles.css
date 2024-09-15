@@ -1,0 +1,241 @@
+/* Geral */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffe6f0; /* Rosa claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #ff69b4; /* Rosa choque */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.header:hover {
+    background-color: #e75480; /* Tom rosa mais escuro no hover */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.aas-icon img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #b85184;
+}
+
+/* Formulários */
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.required-indicator {
+    color: red;
+}
+
+.btn {
+    background-color: #5989d1; /* Azul claro */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e75480; /* Tom rosa mais escuro */
+    transform: scale(1.01); /* Leve aumento ao passar o mouse */
+}
+
+/* Lista de Pacientes */
+.patient-list-container {
+    margin-top: 20px;
+}
+
+.patient-item {
+    background-color: #f5f5f5; /* Tom cinza claro */
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.patient-item:hover {
+    background-color: #e0e0e0; /* Tom cinza um pouco mais escuro no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra um pouco mais forte no hover */
+}
+
+/* Sumário de Pacientes */
+.patient-summary {
+    display: flex;
+    justify-content: space-between; /* Alinha os itens ao longo do eixo principal */
+    align-items: center; /* Alinha os itens ao longo do eixo transversal */
+    width: 100%;
+}
+
+.patient-summary span {
+    font-weight: bold; /* Negrito para destaque */
+}
+
+.patient-summary-text {
+    flex: 1; /* Faz o texto ocupar o máximo de espaço possível */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.patient-summary-buttons {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+    align-items: center; /* Alinha os botões verticalmente no centro */
+    justify-content: flex-end; /* Alinha os botões ao final (direita) */
+}
+
+
+/* Botões da lista de pacientes */
+.patient-summary .delete-btn {
+    background-color: #ff6347; /* Vermelho para o botão de delete */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.patient-summary .view-more-btn,
+.patient-summary .view-less-btn {
+    background-color: #ff69b4; /* Rosa choque */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.patient-summary .view-more-btn:hover,
+.patient-summary .view-less-btn:hover {
+    background-color: #e75480; /* Tom rosa mais escuro */
+}
+
+/* Detalhes do Paciente */
+.patient-details {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Notificações */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 10000;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    animation: fade-in 0.5s forwards;
+}
+
+.notification.success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.notification.error {
+    background-color: #f44336;
+    color: white;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.notification.hide {
+    animation: fade-out 0.5s forwards;
+}

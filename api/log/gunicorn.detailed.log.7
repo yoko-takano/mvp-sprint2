@@ -1,0 +1,98 @@
+[2024-09-04 10:50:36,347] ERROR log_exception() L1449 Exception on /patients [GET] - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/app.py", line 51, in get_patients
+    return represent_patient(patients), 200
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/schemas/patient_schema.py", line 45, in represent_patient
+    "id": patient.id,
+AttributeError: 'list' object has no attribute 'id'
+[2024-09-04 10:50:36,348] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 10:50:36] "[35m[1mGET /patients HTTP/1.1[0m" 500 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 10:50:36,816] ERROR log_exception() L1449 Exception on /patients [GET] - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/app.py", line 51, in get_patients
+    return represent_patient(patients), 200
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/schemas/patient_schema.py", line 45, in represent_patient
+    "id": patient.id,
+AttributeError: 'list' object has no attribute 'id'
+[2024-09-04 10:50:36,818] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 10:50:36] "[35m[1mGET /patients HTTP/1.1[0m" 500 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 10:50:37,108] ERROR log_exception() L1449 Exception on /patients [GET] - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/app.py", line 51, in get_patients
+    return represent_patient(patients), 200
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/schemas/patient_schema.py", line 45, in represent_patient
+    "id": patient.id,
+AttributeError: 'list' object has no attribute 'id'
+[2024-09-04 10:50:37,110] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 10:50:37] "[35m[1mGET /patients HTTP/1.1[0m" 500 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 10:50:37,548] ERROR log_exception() L1449 Exception on /patients [GET] - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+  File "/home/cyberforming-1790/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/app.py", line 51, in get_patients
+    return represent_patient(patients), 200
+  File "/home/cyberforming-1790/Documentos/mvp_sprint2/api/schemas/patient_schema.py", line 45, in represent_patient
+    "id": patient.id,
+AttributeError: 'list' object has no attribute 'id'
+[2024-09-04 10:50:37,550] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 10:50:37] "[35m[1mGET /patients HTTP/1.1[0m" 500 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 10:53:59,852] INFO _log() L224   * Detected change in '/home/cyberforming-1790/Documentos/mvp_sprint2/api/app.py', reloading - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 10:54:03,426] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 10:54:03] "GET /patients HTTP/1.1" 200 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 10:54:04,013] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 10:54:04] "GET /patients HTTP/1.1" 200 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 11:04:49,338] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 11:04:49] "GET /patients HTTP/1.1" 200 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 11:11:13,015] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 11:11:13] "GET /patients HTTP/1.1" 200 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 11:12:08,562] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 11:12:08] "GET /patients HTTP/1.1" 200 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 11:14:24,205] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 11:14:24] "GET /patients HTTP/1.1" 200 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 11:14:26,864] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 11:14:26] "GET /patients HTTP/1.1" 200 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 11:14:46,986] INFO _log() L224  127.0.0.1 - - [04/Sep/2024 11:14:46] "OPTIONS /patient HTTP/1.1" 200 - - call_trace=/home/cyberforming-1790/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2024-09-04 11:14:47,240] WARNING add_patient() L102  Error adding patient 'Paula', Patient Paula already exists in the database - call_trace=/home/cyberforming-1790/Documentos/mvp_sprint2/api/app.py L102 
